@@ -19,7 +19,6 @@ teacher.belongsTo(user, {
   },
 });
 const models = database.models;
-console.log(models);
 
 db.database = database;
 

@@ -6,10 +6,8 @@ module.exports = {
     return user;
   },
   createUser: async (data) => {
-    console.log("ghghg");
-    console.log(models.user);
     const user = await models.user.create(data);
-    console.log(user);
+
     return user;
   },
 };
