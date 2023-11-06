@@ -24,4 +24,8 @@ module.exports = {
       });
     }
   },
+  createStudent: async (req, res) => {
+    const data = await userService.createStudent();
+    res.send(data);
+  },
 };

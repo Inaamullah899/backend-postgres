@@ -10,4 +10,9 @@ module.exports = {
 
     return user;
   },
+  createStudent: async (data) => {
+    const student = await models.student.create(data);
+
+    return student;
+  },
 };
