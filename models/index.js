@@ -2,6 +2,7 @@ const teacher = require("./schema/teacherSchema");
 const student = require("./schema/studentSchema");
 const user = require("./schema/userSchema");
 const database = require("../common/dbconnection");
+const course = require("./schema/courseSchema");
 const db = require("../config");
 user.hasOne(teacher, {
   onDelete: "CASCADE",
@@ -34,6 +35,14 @@ student.belongsTo(user, {
     allowNull: false,
     unique: true,
   },
+});
+student.belongsTo(course, {
+  through: "student_course",
+  foreignKey: "studentID",
+});
+course.belongsTo(student, {
+  through: "student_course",
+  foreignKey: "courseID",
 });
 const models = database.models;
 

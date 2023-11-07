@@ -1,21 +1,17 @@
 const { DataTypes } = require("sequelize");
 const database = require("../../common/dbconnection");
-const student = database.define(
-  "student",
+const course = database.define(
+  "course",
   {
-    userID: {
+    courseNmae: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    departement: {
+    creditHours: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   },
   { timestamps: true, paranoid: true }
 );
-module.exports = student;
+module.exports = course;
