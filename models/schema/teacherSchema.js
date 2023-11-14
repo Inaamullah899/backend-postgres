@@ -12,7 +12,7 @@ const teacher = database.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    departement: {
+    specilization: {
       type: DataTypes.STRING,
       allowNull: false,
     },
