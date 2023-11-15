@@ -3,11 +3,17 @@ const database = require("../../common/dbconnection");
 const course = database.define(
   "course",
   {
-    courseNmae: {
+    courseID: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
       allowNull: false,
     },
-    creditHours: {
+    courseName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },

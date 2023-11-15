@@ -3,10 +3,12 @@ const database = require("../../common/dbconnection");
 const student = database.define(
   "student",
   {
-    userID: {
+    studentId: {
+      primaryKey: true,
+      autoIncrement: true,
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
+
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,

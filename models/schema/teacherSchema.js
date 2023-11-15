@@ -3,7 +3,7 @@ const database = require("../../common/dbconnection");
 const teacher = database.define(
   "teacher",
   {
-    id: {
+    teacherId: {
       primaryKey: true,
       autoIncrement: true,
       type: DataTypes.INTEGER,

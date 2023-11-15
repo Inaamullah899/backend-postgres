@@ -36,11 +36,11 @@ student.belongsTo(user, {
     unique: true,
   },
 });
-student.belongsTo(course, {
+student.belongsToMany(course, {
   through: "student_course",
   foreignKey: "studentID",
 });
-course.belongsTo(student, {
+course.belongsToMany(student, {
   through: "student_course",
   foreignKey: "courseID",
 });
