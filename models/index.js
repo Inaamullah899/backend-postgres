@@ -44,6 +44,14 @@ course.belongsToMany(student, {
   through: "student_course",
   foreignKey: "courseID",
 });
+teacher.belongsToMany(course, {
+  through: "teacher_course",
+  foreignKey: "teacherID",
+});
+course.belongsToMany(teacher, {
+  through: "teacher_course",
+  foreignKey: "courseID",
+});
 const models = database.models;
 
 db.database = database;
