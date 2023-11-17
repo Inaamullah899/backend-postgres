@@ -54,6 +54,4 @@ course.belongsToMany(teacher, {
 });
 const models = database.models;
 
-db.database = database;
-
 module.exports = { database, models };
